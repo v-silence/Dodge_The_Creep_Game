@@ -1,0 +1,67 @@
+[gd_scene load_steps=14 format=3 uid="uid://7t8jbi2asxo8"]
+
+[ext_resource type="Script" uid="uid://jtv3h2g5o4od" path="res://coin.gd" id="1_uf4yh"]
+[ext_resource type="Texture2D" uid="uid://3c4ty4oqxytv" path="res://art/Gold_11.png" id="2_ciu18"]
+[ext_resource type="Texture2D" uid="uid://cr5j8fo0h30mt" path="res://art/Gold_12.png" id="3_ybu58"]
+[ext_resource type="Texture2D" uid="uid://cxcmgnns5co2c" path="res://art/Gold_13.png" id="4_s5w7y"]
+[ext_resource type="Texture2D" uid="uid://chn8fgt0l18vd" path="res://art/Gold_14.png" id="5_relgi"]
+[ext_resource type="Texture2D" uid="uid://dj0u03sawtxn1" path="res://art/Gold_15.png" id="6_3gef1"]
+[ext_resource type="Texture2D" uid="uid://pmiya44ctaek" path="res://art/Gold_16.png" id="7_4rshd"]
+[ext_resource type="Texture2D" uid="uid://dcfbp8u83khq4" path="res://art/Gold_17.png" id="8_oechm"]
+[ext_resource type="Texture2D" uid="uid://bs6agi08xycrs" path="res://art/Gold_18.png" id="9_x3tkn"]
+[ext_resource type="Texture2D" uid="uid://ys3we1bxq7pk" path="res://art/Gold_19.png" id="10_huwo7"]
+[ext_resource type="Texture2D" uid="uid://cyd8rtp1iqtos" path="res://art/Gold_20.png" id="11_8np4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4lfy0"]
+radius = 8.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7l372"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ciu18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ybu58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s5w7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_relgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3gef1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4rshd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oechm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x3tkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_huwo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8np4n")
+}],
+"loop": true,
+"name": &"rotating",
+"speed": 10.0
+}]
+
+[node name="Coin" type="RigidBody2D" groups=["coin"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_uf4yh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4lfy0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["coin"]]
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_7l372")
+animation = &"rotating"

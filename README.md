@@ -1,3 +1,4 @@
 Simple game about dodging creeps and getting points
 
-![image](https://github.com/user-attachments/assets/f3bb2539-1811-4cdc-b48e-10ba0be26155)
+![image](https://github.com/user-attachments/assets/9b1d51da-d6cb-4ffb-943f-87026788c1b6)
+
